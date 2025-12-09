@@ -26,10 +26,11 @@
     return Math.floor(((max+1)*Math.random()));
    }
    function moveStar() {
-    const star = document.querySelector('.star');
-    star.style.color='red';
-    star.style.left = newCoords(90) + '%';
-    star.style.top = newCoords(90) + '%';
+    const stars = document.querySelectorAll('.star');
+    stars.foreach( star => {
+     star.style.left = newCoords(90) + '%';
+     star.style.top = newCoords(90) + '%';
+    })
    }
    window.addEventListener('click', event => moveStar());
   </script>
