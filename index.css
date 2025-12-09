@@ -1,5 +1,7 @@
-<!-- CSS -->
-   body {background: CornflowerBlue;overflow:hidden;}
+   body {
+    background: CornflowerBlue;
+    overflow:hidden;
+   }
    .snowflake{
     position:absolute;
     top:-40px;
@@ -14,17 +16,17 @@
   @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
   @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
-   .ng {
-    font-weight: bold;
-    font-size: 300%;
-    color: red;
-   }
-   .star {
-    top: 100px;
-    left: 100px;
-    position: absolute;
-    font-size: 400%;
-   }
-   .star.gn { color: green; }
-   .star.rd { color: red; }
-   .star.mg { color: magenta; }
+  .ng {
+   font-weight: bold;
+   font-size: 300%;
+   color: red;
+  }
+  .star {
+   top: 100px;
+   left: 100px;
+   position: absolute;
+   font-size: 400%;
+  }
+  .star.gn { color: green; }
+  .star.rd { color: red; }
+  .star.mg { color: magenta; }
