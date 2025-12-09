@@ -25,12 +25,13 @@
    function newCoords(max) {
     return Math.floor(((max+1)*Math.random()));
    }
+   function moveSmoothly(element, newLeft, newTop) {
+     element.style.left = newLeft;
+     element.style.top = newTop;
+   }
    function moveStars() {
     const stars = document.querySelectorAll('.star');
-    stars.forEach( star => {
-     star.style.left = newCoords(90) + '%';
-     star.style.top = newCoords(90) + '%';
-    })
+    stars.forEach( star => moveSmoothly(star, newCoords(90)+'%', newCoords(90)+'%'); )
    }
    window.addEventListener('click', event => moveStars());
   </script>
