@@ -15,7 +15,8 @@
     height: 30px;
     top: 100px;
     left: 100px;
-    position: absolute;'
+    position: absolute;
+    font-size: 400%;
    }
   </style>
   <script>
@@ -28,11 +29,11 @@
     star.style.left = newCoords(90) + '%';
     star.style.top = newCoords(90) + '%';
    }
-   
+   window.addEventListener('click', event => moveStar());
   </script>
  </head>
  <body>
   <p class='ng'>С новым годом!</p>
-  <div class='star' onClick="moveStar()">***</div>
+  <div class='star'>***</div>
  </body>
 </html>
