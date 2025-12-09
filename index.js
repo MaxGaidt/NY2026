@@ -1,4 +1,3 @@
-// JS
    var snow_intensity = 50; // smaller number = more snowflakes;
    
    function Snowflake(){
@@ -69,4 +68,5 @@ let interval = setInterval(function() {
     const stars = document.querySelectorAll('.star');
     stars.forEach( star => moveSmoothly(star, newCoords(90)+'%', newCoords(90)+'%') )
    }
+
    window.addEventListener('click', event => moveStars());
