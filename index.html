@@ -5,6 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>С новым 2026 годом!</title>
   <link rel="stylesheet" href="./index.css" />
+  <style>
+   .container {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+
+  display: block;
+}
+  </style>
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
   <script src="https://unpkg.com/fireworks-js@2.x/dist/index.umd.js"></script>
   <!-- <script src="index.js"></script> --><!-- type="module" -->
@@ -14,8 +30,9 @@
   fireworks.start()
  </script>
  </head>
- <body class='fireworks-container'>
+ <body>
   <p class='ng'>С новым годом!</p>
+  <div class='container'></div>
   <!-- <div class='star rd'>*</div>
   <div class='star gn'>*</div>
   <div class='star mg'>*</div> -->
