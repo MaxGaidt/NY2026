@@ -45,7 +45,7 @@ let interval = setInterval(function() {
     element.style.left = positionLeft + 'px';
   }
   if (right === clientW && bottom === clientH) { clearInterval(interval); }
-}, 50);
+}, stepTime*1000);
     //element.style.left = newLeft;
     //element.style.top = newTop;
    }
