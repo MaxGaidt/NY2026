@@ -26,9 +26,28 @@
     return Math.floor(((max+1)*Math.random()));
    }
    function moveSmoothly(element, newLeft, newTop) {
-     console.log('el=' + element + ' newLeft=' + newLeft + ' newTop=' + newTop);
-     element.style.left = newLeft;
-     element.style.top = newTop;
+    const steps = 10;
+    const timeSecs = 1;
+    const stepTime = timeSecs / steps;
+    let positionTop = 0;
+    let positionLeft = 0;
+
+let interval = setInterval(function() {
+  const { bottom, right } = element.getBoundingClientRect();
+  const clientW = window.innerWidth;
+  const clientH = window.innerHeight;
+  if (clientH - bottom !== newTop) {
+    positionTop += 1;
+    element.style.top = positionTop + 'px';
+  }
+  if (clientW - right !== newLeft) {
+    positionLeft += 1;
+    d.style.left = positionLeft + 'px';
+  }
+  if (right === clientW && bottom === clientH) { clearInterval(interval); }
+}, 50);
+    //element.style.left = newLeft;
+    //element.style.top = newTop;
    }
    function moveStars() {
     const stars = document.querySelectorAll('.star');
@@ -39,18 +58,6 @@
  </head>
  <body>
   <p class='ng'>С новым годом!</p>
-  <div class='star rd'>*</div>
-  <div class='star gn'>*</div>
-  <div class='star mg'>*</div>
-  <div class='star rd'>*</div>
-  <div class='star gn'>*</div>
-  <div class='star mg'>*</div>
-  <div class='star rd'>*</div>
-  <div class='star gn'>*</div>
-  <div class='star mg'>*</div>
-  <div class='star rd'>*</div>
-  <div class='star gn'>*</div>
-  <div class='star mg'>*</div>
   <div class='star rd'>*</div>
   <div class='star gn'>*</div>
   <div class='star mg'>*</div>
