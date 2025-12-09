@@ -42,7 +42,7 @@ let interval = setInterval(function() {
   }
   if (clientW - right !== newLeft) {
     positionLeft += 1;
-    d.style.left = positionLeft + 'px';
+    element.style.left = positionLeft + 'px';
   }
   if (right === clientW && bottom === clientH) { clearInterval(interval); }
 }, 50);
