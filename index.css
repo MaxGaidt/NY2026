@@ -106,9 +106,9 @@ body {
   font-family: Cursive , Arial, sans-serif;
   color: #fff;
   text-shadow: 0 0 5px #ff0000, 0 0 10px #ff3333, 0 0 20px #ff6666;
-  animation: sparkle 2s infinite;
   z-index: 4;
 }
+<!-- animation: sparkle 2s infinite; -->
 
 @keyframes sparkle {
   0%, 100% {
